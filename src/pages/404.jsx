@@ -1,7 +1,7 @@
 const ErrorPage = () => {
   return (
     <>
-      <p>Test Router coy!!!</p>
+      <p>404</p>
     </>
   )
 }

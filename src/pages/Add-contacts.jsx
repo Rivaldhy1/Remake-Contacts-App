@@ -1,7 +1,7 @@
 const AddContacts = () => {
   return (
     <>
-      <p>Test Router coy!!!</p>
+      <p>Tambah contact mu</p>
     </>
   )
 }
