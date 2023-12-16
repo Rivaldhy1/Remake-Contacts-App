@@ -1,5 +1,10 @@
-export const Button = () => {
+export const Button = ({ children, type }) => {
   return (
-    <button className="w-full p-2 my-10 bg-red-100 shadow-lg">test</button>
-  );
-};
+    <button
+      className="transition ease-linear w-[327px] h-8 my-10 mx-auto shadow-main font-normal text-lg text-primary bg-primary rounded-md hover:bg-primaryBox hover:text-black"
+      type={type}
+    >
+      {children}
+    </button>
+  )
+}

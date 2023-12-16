@@ -1,8 +1,8 @@
 const ListContacts = () => {
   return (
-    <div className="container">
-      <div className="">test</div>
-    </div>
+    <section className="container mx-auto">
+      <div className=""></div>
+    </section>
   )
 }
 

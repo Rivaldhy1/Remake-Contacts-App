@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="w-full text-center py-8">
-      <p className="text-FooterText font-normal">
+      <p className="text-secondary font-normal">
         © Rivaldhy Rizki Akbar. 2023 All rigths reserved
       </p>
     </footer>
