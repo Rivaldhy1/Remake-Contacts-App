@@ -2,26 +2,24 @@ import { Button } from "../components/elements/Button"
 import Footer from "../components/elements/Footer"
 import Input from "../components/elements/Input"
 import Label from "../components/elements/Label"
+import TitleText from "../components/elements/Title"
 
 const AddContacts = () => {
   return (
-    <section className="container bg-primary min-h-screen mx-auto grid">
-      <h1 className="drop-shadow-main text-primary text-center text-[32px] tracking-wider pt-[84px]">
-        Add Contact
-      </h1>
-      <div className="flex flex-col justify-center items-center">
-        <div className="w-[119px] h-[119px] rounded-full bg-white shadow-main my-[28px]">
-          <img src="" alt="" className="w-full object-cover" />
+    <section className="bg-primary min-h-screen grid grid-rows-1">
+      <TitleText>Add Contacts</TitleText>
+      <form className="grid grid-flow-row place-items-center gap-7">
+        <div className="flex flex-col justify-center items-center">
+          <div className="w-[119px] h-[119px] rounded-full bg-white shadow-main my-[28px]">
+            <img src="" alt="" className="w-full object-cover" />
+          </div>
+          <input
+            type="file"
+            name="file-input"
+            id="file-input"
+            className="w-[95px] overflow-hidden"
+          />
         </div>
-        <input
-          type="file"
-          name="file-input"
-          id="file-input"
-          className="w-[95px] overflow-hidden"
-        />
-      </div>
-
-      <form className="mt-7 grid grid-flow-row place-items-center gap-7">
         <Label htmlForm="fname">
           Name:
           <Input
