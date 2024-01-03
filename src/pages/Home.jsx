@@ -1,5 +1,5 @@
-import Footer from "../components/elements/Footer"
-import BoxsHome from "../components/fragments/BoxsHome"
+import Footer from '../components/elements/Footer'
+import BoxsHome from '../components/fragments/BoxsHome'
 
 const Home = () => {
   return (
