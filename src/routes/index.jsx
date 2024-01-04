@@ -20,7 +20,7 @@ export default function Router() {
       element: <ListContacts />,
     },
     {
-      path: '/contact/:name',
+      path: '/contact/:id',
       element: <DetailContact />,
     },
     {
