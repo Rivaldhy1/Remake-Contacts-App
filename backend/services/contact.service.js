@@ -31,3 +31,15 @@ export const deleteContact = async (id) => {
     console.log(error)
   }
 }
+
+export const addContact = async (contactData) => {
+  try {
+    const response = await axios.post(
+      'http://localhost:8082/api/contacts',
+      contactData
+    )
+    console.log(response.data)
+  } catch (error) {
+    console.log(error)
+  }
+}

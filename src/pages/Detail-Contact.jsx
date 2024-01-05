@@ -23,9 +23,9 @@ const DetailContact = () => {
             className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="text-center mt-5 px-[50px]">
+        <div className="text-center mt-5 px-[50px] whitespace-normal">
           <h1 className="text-2xl text-primary">About: </h1>
-          <p className="text-base tracking-wide pt-3 text-primary">
+          <p className="text-base tracking-wide pt-3 text-primary wrap-text">
             {contact.about}
           </p>
         </div>
@@ -35,7 +35,7 @@ const DetailContact = () => {
             <img src="/profile.svg" alt="profile" />
             <div className="px-5 pb-2 tracking-wide">
               <h3>Name</h3>
-              <h4>{contact.fname}...</h4>
+              <h4>{contact.fname}</h4>
             </div>
             <img
               src="/edit.svg"
@@ -48,7 +48,7 @@ const DetailContact = () => {
             <img src="/profile.svg" alt="profile" />
             <div className="px-5 pb-2 tracking-wide">
               <h3>Email</h3>
-              <h4>{contact.email}...</h4>
+              <h4>{contact.email}</h4>
             </div>
             <img
               src="/edit.svg"

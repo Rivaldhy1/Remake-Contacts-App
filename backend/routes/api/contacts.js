@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import express from 'express'
 import ContactModel from '../../models/contact.js'
+import { v4 as uuidv4 } from 'uuid'
 
 const router = express.Router()
 const contacts = ContactModel
@@ -38,6 +39,7 @@ router.get('/:id', (req, res) => {
 // @desc    Add/save contact
 // @access  Public
 router.post('/', (req, res) => {
+  req.body.contact_id = uuidv4()
   contacts
     .create(req.body)
     .then((contact) =>
