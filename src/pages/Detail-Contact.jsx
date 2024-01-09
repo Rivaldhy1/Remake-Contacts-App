@@ -9,7 +9,8 @@ const DetailContact = () => {
 
   useEffect(() => {
     getContactById(id, (contact) => {
-      setContact(contact.data)
+      console.log(contact)
+      setContact(contact)
     })
   }, [id])
 
@@ -23,19 +24,20 @@ const DetailContact = () => {
             className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="text-center mt-5 px-[50px] whitespace-normal">
+        <div className="text-center mt-5 px-[50px] w-[320px] overflow-hidden">
           <h1 className="text-2xl text-primary">About: </h1>
-          <p className="text-base tracking-wide pt-3 text-primary wrap-text">
-            {contact.about}
+          <p className="text-base tracking-wide pt-3 text-primary break-words">
+            awawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawda
+            {/* {contact.about} */}
           </p>
         </div>
 
         <div className="place-items-center grid gap-14 px-5 my-14">
           <div className="relative flex items-center text-primary w-[320px]">
             <img src="/profile.svg" alt="profile" />
-            <div className="px-5 pb-2 tracking-wide">
+            <div className="px-5 pb-2 tracking-wide overflow-hidden">
               <h3>Name</h3>
-              <h4>{contact.fname}</h4>
+              <p className="break-words text-sm">{contact.fname}</p>
             </div>
             <img
               src="/edit.svg"
@@ -46,9 +48,9 @@ const DetailContact = () => {
           </div>
           <div className="relative flex items-center text-primary w-[320px]">
             <img src="/profile.svg" alt="profile" />
-            <div className="px-5 pb-2 tracking-wide">
+            <div className="px-5 pb-2 tracking-wide overflow-hidden">
               <h3>Email</h3>
-              <h4>{contact.email}</h4>
+              <p className="break-words">{contact.email}</p>
             </div>
             <img
               src="/edit.svg"
@@ -59,9 +61,9 @@ const DetailContact = () => {
           </div>
           <div className="relative flex items-center text-primary w-[320px]">
             <img src="/phone.svg" alt="phone" />
-            <div className="px-5 pb-2 tracking-wide">
+            <div className="px-5 pb-2 tracking-wide overflow-hidden">
               <h3>Phone</h3>
-              <h4>{contact.phone}</h4>
+              <p className="break-words">{contact.phone}</p>
             </div>
             <img
               src="/edit.svg"

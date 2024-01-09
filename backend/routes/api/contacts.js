@@ -11,28 +11,34 @@ const contacts = ContactModel
 // @access  Public
 router.get('/', (req, res) => {
   contacts.find().then((contact) => {
-    res.status(200).send({ status: true, statusCode: 200, data: contact })
+    res.status(200).send({ status: true, statusCode: 200, contact })
   })
 })
 
 // @route   GET api/contacts/:id
 // @desc    Get single contact by id
 // @access  Public
-router.get('/:id', (req, res) => {
-  contacts
-    .findById(req.params.id)
-    .then((contact) =>
-      res.status(200).send({ status: true, statusCode: 200, data: contact })
-    )
-    .catch((err) =>
-      res.status(404).json({
+router.get('/:id', async (req, res) => {
+  try {
+    const contact = await contacts.findById(req.params.id)
+    if (!contact) {
+      return res.status(404).json({
         status: false,
         statusCode: 404,
-        msg: 'data not found!!',
-        errMsg: err.message,
+        msg: 'Data not found!!',
         data: {},
       })
-    )
+    }
+    res.status(200).json({ status: true, statusCode: 200, data: contact })
+  } catch (err) {
+    res.status(500).json({
+      status: false,
+      statusCode: 500,
+      msg: 'Internal server error',
+      errMsg: err.message,
+      data: {},
+    })
+  }
 })
 
 // @route   POST api/contacts

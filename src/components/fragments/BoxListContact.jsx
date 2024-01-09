@@ -17,7 +17,7 @@ const BoxContact = ({ id, src, fname }) => {
           } w-full h-full object-cover object-center`}
         />
       </div>
-      <h1 className="ml-5 tracking-wide">{fname.substring(0, 17)}...</h1>
+      <h1 className="ml-5 tracking-wide">{fname.substring(0, 10)}...</h1>
       <div className="absolute grid grid-flow-col place-items-center gap-5 right-3">
         <Link to={`/contact/${id}`}>
           <img src="eye.svg" alt="see-detail" className="cursor-pointer w-5" />

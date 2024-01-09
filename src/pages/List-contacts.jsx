@@ -8,9 +8,9 @@ const ListContacts = () => {
   const [contacts, setContacts] = useState([])
   useEffect(() => {
     getContact((contact) => {
-      setContacts(contact.data)
+      setContacts(contact)
     })
-  })
+  }, [contacts])
 
   return (
     <section className="bg-primary min-h-screen">

@@ -4,7 +4,7 @@ export const getContact = (callback) => {
   axios
     .get('http://localhost:8082/api/contacts')
     .then((res) => {
-      callback(res.data)
+      callback(res.data.contact)
     })
     .catch((err) => {
       console.log(err)
@@ -14,7 +14,7 @@ export const getContact = (callback) => {
 export const getContactById = (id, callback) => {
   axios(`http://localhost:8082/api/contacts/${id}`)
     .then((res) => {
-      callback(res.data)
+      callback(res.data.data)
     })
     .catch((err) => {
       console.log(err)
