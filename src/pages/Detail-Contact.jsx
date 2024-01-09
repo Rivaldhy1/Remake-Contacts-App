@@ -27,8 +27,7 @@ const DetailContact = () => {
         <div className="text-center mt-5 px-[50px] w-[320px] overflow-hidden">
           <h1 className="text-2xl text-primary">About: </h1>
           <p className="text-base tracking-wide pt-3 text-primary break-words">
-            awawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawdaawawkoaowkaowkaokwoakwoakwoakwawdadawdawdawdawawda
-            {/* {contact.about} */}
+            {contact.about}
           </p>
         </div>
 
